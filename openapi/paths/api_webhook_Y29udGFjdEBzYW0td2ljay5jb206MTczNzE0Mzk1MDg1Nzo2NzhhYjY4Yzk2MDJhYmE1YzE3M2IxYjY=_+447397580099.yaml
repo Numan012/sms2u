@@ -1,0 +1,145 @@
+get:
+  tags:
+    - SMS2U
+  summary: messages
+  description: >-
+    This endpoint is named "messages". It's a GET type request which means it
+    retrieves, or gets, data from a specified resource. In this case, the
+    resource is a specific URL found at:
+    "https://dashboard.sms2u.io/api/webhook/Y29udGFjdEBzYW0td2ljay5jb206MTczNzE0Mzk1MDg1Nzo2NzhhYjY4Yzk2MDJhYmE1YzE3M2IxYjY=/+447397580099".
+
+
+    The endpoint doesn't require any headers to be included in the request.
+
+
+    In terms of authentication, it uses 'Bearer' type authentication, meaning
+    it's token-based. Tokens allow applications to verify the identity of the
+    user and maintain session information about that user. Here, the key of this
+    token is named as "token", the value is "BearerToken", and it's identified
+    as a 'string' type data, which is a sequence of characters.
+
+
+    This type of authentication is typically used for security and protection,
+    ensuring only authorised access to the respective data. So, to interact with
+    this endpoint, developers would need to provide this specific bearer token
+    in the authorization header while making the request. 
+
+
+    Please make sure to replace the 'BearerToken' with your actual token key
+    when making a request to this endpoint.
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: OK
+      headers:
+        Server:
+          schema:
+            type: string
+            example: nginx/1.18.0 (Ubuntu)
+        Date:
+          schema:
+            type: string
+            example: Tue, 11 Feb 2025 10:37:12 GMT
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '974'
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        ETag:
+          schema:
+            type: string
+            example: W/"3ce-Qxd+fADV3OPpGi2RuIWfFuedW+0"
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            messages:
+              - _id: 67ab1d3cf5d0746d07f0a301
+                body: 928511 is your Ticketmaster code.
+                from: TKTMASTER
+                to: '+447397580099'
+                dateReceived: '2025-02-11T09:49:48.039Z'
+              - _id: 67aa0a08076f92f8e0c40180
+                body: 218128 is your Ticketmaster code.
+                from: TKTMASTER
+                to: '+447397580099'
+                dateReceived: '2025-02-10T14:15:36.868Z'
+              - _id: 67a7570d06854264004e6482
+                body: 941840 is your Ticketmaster code.
+                from: TKTMASTER
+                to: '+447397580099'
+                dateReceived: '2025-02-08T13:07:25.447Z'
+              - _id: 67a754ed06854264004e6473
+                body: 941840 is your Ticketmaster code.
+                from: TKTMASTER
+                to: '+447397580099'
+                dateReceived: '2025-02-08T12:58:21.098Z'
+              - _id: 67a7536006854264004e6445
+                body: 411206 is your Ticketmaster code.
+                from: TKTMASTER
+                to: '+447397580099'
+                dateReceived: '2025-02-08T12:51:44.203Z'
+              - _id: 67a7523206854264004e642a
+                body: 411206 is your Ticketmaster code.
+                from: TKTMASTER
+                to: '+447397580099'
+                dateReceived: '2025-02-08T12:46:42.522Z'
+    '404':
+      description: Not Found
+      headers:
+        Server:
+          schema:
+            type: string
+            example: nginx/1.18.0 (Ubuntu)
+        Date:
+          schema:
+            type: string
+            example: Tue, 11 Feb 2025 10:39:46 GMT
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '45'
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        ETag:
+          schema:
+            type: string
+            example: W/"2d-hHv8Rbm/ij2cLl9JYZdm1h3pIXg"
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            success: false
+            message: User Not Found!
